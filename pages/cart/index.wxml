@@ -1,0 +1,8 @@
+<view class="address">
+  <view class="address_button" bindtap="getAddress" wx:if="{{false}}">+添加收货地址</view>
+  <view class="address_content" wx:else>
+    <view class="address_address">{{address.address}}</view>
+    <view class="address_phone">{{address.phone}}</view>
+    <view class="address_name">{{address.name}}</view>
+  </view>
+</view>

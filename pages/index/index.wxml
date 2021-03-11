@@ -1,0 +1,25 @@
+<!-- 搜索模块 -->
+<view>
+  <search></search>
+</view>
+<!-- 轮播图 -->
+<view class="index_swiper">
+  <swiper class="index_swiper" autoplay indicator-dots interval="2000" circular>
+    <swiper-item wx:for="{{message}}" wx:key="goods_id">
+      <navigator><image class="swiper_image" mode="widthFix" src="{{item.image_src}}"></image></navigator>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 导航栏 -->
+<view class="index_daohang clearfix">
+  <navigator class="daohang_item" wx:for="{{daohang}}" wx:key="name" target="self" url="../category/index" open-type="switchTab" hover-class="none"><image src="{{item.image_src}}" mode="widthFix"></image></navigator>
+</view>
+<!-- 楼层 -->
+<view class="floor" wx:for="{{louceng}}" wx:key="floor_title">
+  <view class="floor_title">
+    <image src="{{item.floor_title.image_src}}" mode="widthFix"></image>
+  </view>
+  <view class="floor_item clearfix">
+    <image wx:for="{{item.product_list}}" wx:key="name" src="{{item.image_src}}"></image>
+  </view>
+</view>

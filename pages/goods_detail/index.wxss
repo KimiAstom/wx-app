@@ -1,0 +1,165 @@
+.swiper .swiper_container {
+  width: 100%;
+  height: 60vw;
+}
+
+.swiper_item {
+  text-align: center;
+}
+
+.swiper_item image {
+  width: 75%;
+  height: 75vw;
+}
+
+.item_content {
+  margin-top: 10rpx;
+}
+
+.item_content_price {
+  width: 100%;
+  height: 40rpx;
+  padding-left: 20rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: var(--themeColor);
+}
+
+.item_content_detail {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+}
+
+.content_title {
+  flex: 5;
+  padding-left: 15rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #666666;
+}
+
+.shoucang {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 2px solid #999999;
+}
+
+.shoucang_icon,
+.shoucang_content {
+  font-size: 38rpx;
+  color: #666666;
+}
+
+.shoucang_content {
+  font-size: 30rpx;
+}
+
+.line {
+  width: 96%;
+  height: 15rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  background-color: #ededed;
+}
+
+.detail_content {
+  padding-bottom: 90rpx;
+}
+
+.detail_content_title {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+  margin: 0 auto;
+  font-size: 36rpx;
+  font-weight: 700;
+  color: var(--themeColor);
+}
+
+.line_1 {
+  width: 96%;
+  height: 15rpx;
+  margin: 0 auto;
+  background-color: #ededed;
+}
+
+.detail_contents {
+  width: 96%;
+  margin: 0 auto;
+}
+
+.bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  border-top: 1px solid #ededed;
+}
+
+.kefu,
+.fenxiang,
+.cart {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 90rpx;
+  font-size: 24rpx;
+  color: #666666;
+}
+
+.kefu_icon,
+.fenxiang_icon,
+.cart_icon {
+  font-size: 36rpx;
+}
+
+.add,
+.buy {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90rpx;
+  color: #fff;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.add {
+  background-color: orange;
+}
+
+.buy {
+  background-color: var(--themeColor);
+}
+
+.kefu button,
+.fenxiang button,
+.cart button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 0;
+}

@@ -1,0 +1,23 @@
+<!-- 搜索模块 -->
+<view>
+  <search></search>
+</view>
+<!-- 导航栏模块 -->
+<view>
+  <tabs tabs_list="{{tabs_list}}" bindchange="change">
+    <block>
+      <view class="item_list">
+        <navigator class="item_container" wx:for="{{goods_list.goods}}" wx:key="goods_id"
+          url="../goods_detail/index?goods_id={{item.goods_id}}" open-type="navigate">
+          <view class="item_image">
+            <image src="{{item.goods_small_logo}}" mode="widthFix"></image>
+          </view>
+          <view class="item_detail">
+            <view class="item_message">{{item.goods_name}}</view>
+            <view class="item_price">￥{{item.goods_price}}</view>
+          </view>
+        </navigator>
+      </view>
+    </block>
+  </tabs>
+</view>

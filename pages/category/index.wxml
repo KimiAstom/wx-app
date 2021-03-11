@@ -1,0 +1,25 @@
+<!-- 搜索模块 -->
+<view>
+    <search></search>
+</view>
+<!-- 分类模块 -->
+<view class="category">
+    <scroll-view scroll-y="true" class="menu_left">
+        <view class="container_left {{check==index?'white':''}}" wx:for="{{fenlei}}" wx:key="cat_id" bindtap="change">
+            <view data-index="{{index}}" class="{{check==index?'red':''}}">{{item.cat_name}}</view>
+        </view>
+    </scroll-view>
+    <scroll-view scroll-y="true" class="menu_right" scroll-top="{{top}}">
+        <view class="container_right" wx:for="{{fenlei[check].children}}" wx:key="cat_id">
+            <view class="right_title"><text decode="true">/&nbsp;&nbsp;</text>{{item.cat_name}}<text
+                    decode="true">&nbsp;&nbsp;/</text></view>
+            <view class="item_container">
+                <navigator class="right_item" wx:for="{{item.children}}" wx:key="cat_id"
+                    url="/pages/goods_list/index?cid={{item.cat_id}}">
+                    <image src="{{item.cat_icon}}" mode="widthFix"></image>
+                    <view>{{item.cat_name}}</view>
+                </navigator>
+            </view>
+        </view>
+    </scroll-view>
+</view>
